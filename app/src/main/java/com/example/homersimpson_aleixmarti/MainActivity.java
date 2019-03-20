@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        media = MediaPlayer.create(getApplicationContext(), R.raw.the_simpsons);
+
         //SET ID
         title=findViewById(R.id.imageViewTitle);
         imgVermell=findViewById(R.id.imgVermell);
@@ -55,12 +55,13 @@ public class MainActivity extends AppCompatActivity {
                     if (media != null && media.isPlaying())
                     {
                         Toast.makeText(getApplicationContext(), getString(R.string.parar), Toast.LENGTH_SHORT).show();
+
                         media.stop();
                     }
                     else
                     {
                         Toast.makeText(getApplicationContext(), getString(R.string.iniciar), Toast.LENGTH_SHORT).show();
-
+                        media = MediaPlayer.create(getApplicationContext(), R.raw.the_simpsons);
                         media.start();
                     }
                 } catch(Exception e) {
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         R.anim.rotation_ull);
                 Animation animDonut = AnimationUtils.loadAnimation(getApplicationContext(),
                         R.anim.anim_donut);
+                media = MediaPlayer.create(getApplicationContext(), R.raw.the_simpsons);
                 if(visible==0){
                     //VISIBLE
                     imgDonut.setVisibility(View.VISIBLE);
