@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@android:color/white">
 
 
     <ImageView
@@ -12,7 +13,7 @@
         android:layout_width="268dp"
         android:layout_height="514dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="26dp"
         android:contentDescription="@string/description"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,14 +24,15 @@
 
     <ImageButton
         android:id="@+id/imageViewTitle"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="8dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/description"
-        app:layout_constraintBottom_toTopOf="@+id/imgVermell"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/animation_title" />
@@ -39,36 +41,33 @@
         android:id="@+id/imgVerd"
         android:layout_width="74dp"
         android:layout_height="80dp"
-        android:layout_marginTop="38dp"
         android:layout_marginEnd="46dp"
         android:layout_marginBottom="50dp"
         android:contentDescription="@string/description"
         app:layout_constraintBottom_toBottomOf="@+id/imgBlau"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imgVermell"
         app:srcCompat="@drawable/engranatge_verd" />
 
     <ImageView
         android:id="@+id/imgBlau"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginBottom="316dp"
         android:contentDescription="@string/description"
-        app:layout_constraintEnd_toEndOf="@+id/imgVermell"
-        app:layout_constraintStart_toStartOf="@+id/imgVermell"
-        app:layout_constraintTop_toTopOf="@+id/imgVermell"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/engranatge_blau" />
 
     <ImageView
         android:id="@+id/imgVermell"
-        android:layout_width="92dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginBottom="400dp"
+        android:layout_width="82dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="212dp"
         android:contentDescription="@string/description"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imgVerd"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/engranatge_vermell" />
 
     <ImageView
@@ -76,7 +75,7 @@
         android:layout_width="42dp"
         android:layout_height="45dp"
         android:layout_marginStart="170dp"
-        android:layout_marginBottom="344dp"
+        android:layout_marginBottom="305dp"
         android:contentDescription="@string/description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,6 +90,7 @@
         android:contentDescription="@string/description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/donut" />
+        app:srcCompat="@drawable/donut"
+        android:background="@android:color/transparent"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -15,12 +15,12 @@ public class MainActivity extends AppCompatActivity {
     ImageButton title,imgDonut;
     ImageView imgVermell,imgVerd,imgBlau,imgUll;
     MediaPlayer media;
-    boolean visible=false;
+    int visible=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        media = MediaPlayer.create(getApplicationContext(), R.raw.the_simpsons);
         //SET ID
         title=findViewById(R.id.imageViewTitle);
         imgVermell=findViewById(R.id.imgVermell);
@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try
                 {
+
                     if (media != null && media.isPlaying())
                     {
                         Toast.makeText(getApplicationContext(), getString(R.string.parar), Toast.LENGTH_SHORT).show();
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     else
                     {
                         Toast.makeText(getApplicationContext(), getString(R.string.iniciar), Toast.LENGTH_SHORT).show();
-                        media = MediaPlayer.create(getApplicationContext(), R.raw.the_simpsons);
+
                         media.start();
                     }
                 } catch(Exception e) {
@@ -79,14 +80,14 @@ public class MainActivity extends AppCompatActivity {
                         R.anim.rotation_ull);
                 Animation animDonut = AnimationUtils.loadAnimation(getApplicationContext(),
                         R.anim.anim_donut);
-                if(!visible){
+                if(visible==0){
                     //VISIBLE
                     imgDonut.setVisibility(View.VISIBLE);
                     imgVermell.setVisibility(View.VISIBLE);
                     imgVerd.setVisibility(View.VISIBLE);
                     imgBlau.setVisibility(View.VISIBLE);
                     imgUll.setVisibility(View.VISIBLE);
-                    visible=true;
+                    visible=1;
 
                     //ANIMATIONS CRATE/ON
 
@@ -100,14 +101,20 @@ public class MainActivity extends AppCompatActivity {
                 else{
 
                     //ANIMATIONS OFF
-                    v.clearAnimation();
+
                     //VISIBLE
+                    imgDonut.clearAnimation();
+                    imgVermell.clearAnimation();
+                    imgVerd.clearAnimation();;
+                    imgBlau.clearAnimation();
+                    imgUll.clearAnimation();
                     imgDonut.setVisibility(View.GONE);
                     imgVermell.setVisibility(View.GONE);
                     imgVerd.setVisibility(View.GONE);
                     imgBlau.setVisibility(View.GONE);
                     imgUll.setVisibility(View.GONE);
-                    visible=false;
+
+                    visible=0;
                     media.stop();
 
 

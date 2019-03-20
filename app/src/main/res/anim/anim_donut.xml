@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:shareInterpolator="false"
     android:interpolator="@android:anim/linear_interpolator"
-    android:fillAfter="true">
+    android:repeatMode="reverse">
 
     <translate
-        android:fromYDelta="0%p"
-        android:toYDelta="75%p"
+        android:fromYDelta="0%"
+        android:toYDelta="100%"
         android:duration="800"
-        android:repeatCount="infinite"/>
-    <translate
-        android:fromYDelta="75%p"
-        android:toYDelta="0%p"
-        android:duration="800"
-        android:repeatCount="infinite"/>
+        android:repeatCount="infinite"
+        />
+
 
     <rotate xmlns:android="http://schemas.android.com/apk/res/android"
         android:fromDegrees="0"
