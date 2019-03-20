@@ -6,13 +6,91 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <ImageView
+        android:id="@+id/imageViewHomerP"
+        android:layout_width="268dp"
+        android:layout_height="514dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="26dp"
+        android:contentDescription="@string/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homer_simpson" />
+
+    <ImageButton
+        android:id="@+id/imageViewTitle"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="18dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/description"
+        app:layout_constraintBottom_toTopOf="@+id/imgVermell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/animation_title" />
+
+    <ImageView
+        android:id="@+id/imgVerd"
+        android:layout_width="74dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="@string/description"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBlau"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgVermell"
+        app:srcCompat="@drawable/engranatge_verd" />
+
+    <ImageView
+        android:id="@+id/imgBlau"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="88dp"
+        android:contentDescription="@string/description"
+        app:layout_constraintEnd_toEndOf="@+id/imgVermell"
+        app:layout_constraintStart_toStartOf="@+id/imgVermell"
+        app:layout_constraintTop_toTopOf="@+id/imgVermell"
+        app:srcCompat="@drawable/engranatge_blau" />
+
+    <ImageView
+        android:id="@+id/imgVermell"
+        android:layout_width="92dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="400dp"
+        android:contentDescription="@string/description"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/imgVerd"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTitle"
+        app:srcCompat="@drawable/engranatge_vermell" />
+
+    <ImageView
+        android:id="@+id/imgUll"
+        android:layout_width="42dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginBottom="344dp"
+        android:contentDescription="@string/description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ull" />
+
+    <ImageButton
+        android:id="@+id/imgDonut"
+        android:layout_width="124dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="380dp"
+        android:contentDescription="@string/description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/donut" />
 
 </android.support.constraint.ConstraintLayout>

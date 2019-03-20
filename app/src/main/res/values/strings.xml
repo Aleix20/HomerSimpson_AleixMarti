@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">HomerSimpson_AleixMarti</string>
+    <string name="description">TODO</string>
+    <string name="parar">Stop audio</string>
+    <string name="iniciar">PLaying audio</string>
+    <string name="error_audio">No audio</string>
 </resources>
